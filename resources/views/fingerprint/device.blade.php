@@ -29,11 +29,16 @@
                         @foreach ($device as $devices)
                         <tr>
                             <th scope="row">{{ $loop->index + 1 }}</th>
-                            <td> <code>{{ $devices->device_name}} </code></td>
-                            <td><code> {{ $devices->sn }} </code></td>
+                            {{-- <td> <code>{{ $devices->device_name}} </code></td> --}}
+                            {{-- <td><code> {{ $devices->sn }} </code></td>
                             <td> <code>{{ $devices->vc }}</code></td>
                             <td> <code>{{ $devices->ac }} </code></td>
-                            <td> <code> {{ $devices->vkey }} </code></td>
+                            <td> <code> {{ $devices->vkey }} </code></td> --}}
+                            <td> <code><?php echo $devices['device_name'] ?> </code></td>
+                            <td> <code><?php echo $devices['sn'] ?> </code></td>
+                            <td> <code><?php echo $devices['vc'] ?> </code></td>
+                            <td> <code><?php echo $devices['ac'] ?> </code></td>
+                            <td> <code><?php echo $devices['vkey'] ?> </code></td>
                             {{-- <!-- <td>{{ $devices->created_at }} </td> --}}
                             {{-- <td>{{ $devices->updated_at }}</td> --> --}}
                             <td><a href="#" class="btn btn-danger">Delete</a></td>
