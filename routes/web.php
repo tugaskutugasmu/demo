@@ -27,4 +27,3 @@ Route::get('/user', 'Demo\DemofpController@get_user')->name('user.ui');
 Route::get('/user/add', 'Demo\DemofpController@get_user_create')->name('user.create.ui');
 Route::post('/user/add','Demo\CreateCustomerController@create_user')->name('user.create');
 
-Route::get('utt/{$id}', 'Demo\DemofpController@test');

@@ -26,9 +26,9 @@
                         @foreach ($customer as $users)
                         <tr>
                             <th scope="row">{{ $loop->index + 1 }}</th>
-                            <td> <code>{{ $users->name}} </code></td>
-                            <!-- <td>{{ $users->created_at }} </td>
-                            <td>{{ $users->updated_at }}</td> -->
+                            <td> <code><?php echo $users['name']?> </code></td>
+                            {{-- <!-- <td>{{ $users->created_at }} </td> --}}
+                            {{-- <td>{{ $users->updated_at }}</td> --> --}}
                             <td> <code>
                             <a href="#" class="btn btn-danger">Delete</a>
                             <a href=""></a>

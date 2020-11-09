@@ -16,11 +16,16 @@ class Device extends Model
        $i 	= 0;
        foreach($result as $row){
            $arr[$i] = array(
-				'device_name'	=> 'device_name',
-				'sn'		=> 'sn',
-				'vc'		=> 'vc',
-				'ac'		=> 'ac',
-				'vkey'		=> 'vkey'
+            'device_name' => $row->device_name,
+				'sn'		   => $row->sn,
+				'vc'		   => $row->vc,
+				'ac'		   => $row->ac,
+				'vkey'		=> $row->vkey
+				// 'device_name'	=> 'device_name',
+				// 'sn'		=> 'sn',
+				// 'vc'		=> 'vc',
+				// 'ac'		=> 'ac',
+				// 'vkey'		=> 'vkey'
 			);
 
 			$i++;
@@ -33,11 +38,11 @@ class Device extends Model
          $i 	= 0;
         foreach($result as $row){
            $arr[$i] = array(
-				'device_name'	=> $row['device_name'],
-				'sn'		=> $row['sn'],
-				'vc'		=> $row['vc'],
-				'ac'		=> $row['ac'],
-				'vkey'		=> $row['vkey']
+				'device_name' => $row->device_name,
+				'sn'		   => $row->sn,
+				'vc'		   => $row->vc,
+				'ac'		   => $row->ac,
+				'vkey'		=> $row->vkey
 			);
 
 			$i++;
@@ -49,11 +54,11 @@ class Device extends Model
         $result = DB::select("SELECT * FROM devices WHERE sn ='".$sn."'");
         foreach($result as $row){
            $arr[$i] = array(
-				'device_name'	=> $row['device_name'],
-				'sn'		=> $row['sn'],
-				'vc'		=> $row['vc'],
-				'ac'		=> $row['ac'],
-				'vkey'		=> $row['vkey']
+				'device_name' => $row->device_name,
+				'sn'		   => $row->sn,
+				'vc'		   => $row->vc,
+				'ac'		   => $row->ac,
+				'vkey'		=> $row->vkey
 			);
 
 			$i++;
